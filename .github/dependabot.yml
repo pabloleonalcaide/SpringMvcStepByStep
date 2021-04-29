@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.springframework.security:spring-security-config
+    versions:
+    - 5.4.2
+    - 5.4.4
+    - 5.4.5
+  - dependency-name: org.springframework.security:spring-security-web
+    versions:
+    - 5.4.2
+    - 5.4.4
+    - 5.4.5
+  - dependency-name: org.webjars:bootstrap
+    versions:
+    - 4.6.0
+  - dependency-name: org.webjars:jquery
+    versions:
+    - 3.5.1
+  - dependency-name: org.hibernate:hibernate-validator
+    versions:
+    - 6.1.5.Final
+  - dependency-name: org.springframework:spring-webmvc
+    versions:
+    - 5.2.3.RELEASE
